@@ -58,6 +58,8 @@ public class Main {
         Animal animal = new Animal("animal", 1, 1, 5, 5);
 
         Dog dog = new Dog("yorkie", 8 ,20 , 2, 4, 1, 22, "long silky");
-        dog.eat();
+//        dog.eat();
+        dog.walk();
+//        dog.run();
     }
 }
