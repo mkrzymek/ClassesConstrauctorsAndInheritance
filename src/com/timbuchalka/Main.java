@@ -9,8 +9,9 @@ public class Main {
         porsche.setModel("911");
         System.out.println(porsche.getModel());
 
-        bankAccount();
+//        bankAccount();
 //        vipCustomer();
+        inheritance();
     }
 
     public static void bankAccount() {
@@ -50,5 +51,13 @@ public class Main {
         System.out.println("name: " + emil.getName() + ", limit: " + emil.getCreditLimit() + ", email: " + emil.getEmail());
         VipCustomer janek = new VipCustomer("Janek", 3000, "janek@wp.pl");
         System.out.println("name: " + janek.getName() + ", limit: " + janek.getCreditLimit() + ", email: " + janek.getEmail());
+    }
+
+    public static void inheritance() { // dziedziczenie
+
+        Animal animal = new Animal("animal", 1, 1, 5, 5);
+
+        Dog dog = new Dog("yorkie", 8 ,20 , 2, 4, 1, 22, "long silky");
+        dog.eat();
     }
 }
