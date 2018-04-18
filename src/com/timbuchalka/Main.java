@@ -3,15 +3,16 @@ package com.timbuchalka;
 public class Main {
 
     public static void main(String[] args) {
-        Car porsche = new Car();
-        Car holden = new Car();
+        Car2 porsche = new Car2();
+        Car2 holden = new Car2();
 
         porsche.setModel("911");
         System.out.println(porsche.getModel());
 
 //        bankAccount();
 //        vipCustomer();
-        inheritance();
+//        inheritance();
+        inheritanceChallenge();
     }
 
     public static void bankAccount() {
@@ -61,5 +62,13 @@ public class Main {
 //        dog.eat();
         dog.walk();
 //        dog.run();
+    }
+
+    public static void inheritanceChallenge() {
+        Outlander outlander = new Outlander(36);
+        outlander.steer(45);
+        outlander.accelerate(30);
+        outlander.accelerate(20);
+        outlander.accelerate(-42);
     }
 }
