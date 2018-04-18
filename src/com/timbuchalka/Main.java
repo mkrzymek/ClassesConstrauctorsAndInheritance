@@ -10,6 +10,7 @@ public class Main {
         System.out.println(porsche.getModel());
 
         bankAccount();
+//        vipCustomer();
     }
 
     public static void bankAccount() {
@@ -35,7 +36,19 @@ public class Main {
         bobsAccount.deposit(50.0);
         bobsAccount.withdrawal(100.0);
 
-        bobsAccount.deposit(51.0);
+        bobsAccount.deposit(1.0);
         bobsAccount.withdrawal(100.0);
+
+        Account timsAccount = new Account("tim", "tim@wp.pl", "12345");
+        System.out.println(timsAccount.getNumber() + " name " + timsAccount.getCustomerName());
+    }
+
+    public static void vipCustomer() {
+        VipCustomer michal = new VipCustomer();
+        System.out.println("name: " + michal.getName() + ", limit: " + michal.getCreditLimit() + ", email: " + michal.getEmail());
+        VipCustomer emil = new VipCustomer("Emil", "emil@wp.pl");
+        System.out.println("name: " + emil.getName() + ", limit: " + emil.getCreditLimit() + ", email: " + emil.getEmail());
+        VipCustomer janek = new VipCustomer("Janek", 3000, "janek@wp.pl");
+        System.out.println("name: " + janek.getName() + ", limit: " + janek.getCreditLimit() + ", email: " + janek.getEmail());
     }
 }

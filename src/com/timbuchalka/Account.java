@@ -11,7 +11,7 @@ public class Account {
     private String customerPhoneNumber;
 
     public Account() {
-        this("56789", 2.50, "Default name", "Default address", "default phone");
+        this("56789", 49, "Default name", "Default address", "default phone");
         System.out.println("Empty constructor called");
     }
 
@@ -25,13 +25,17 @@ public class Account {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
+    public Account(String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this("9999", 100.55, customerName, customerEmailAddress, customerPhoneNumber);
+    }
+
     public void deposit(double depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + " made. New balance is " + this.balance);
     }
 
     public void withdrawal(double withdrawalAmount) {
-        if (this.balance - withdrawalAmount <= 0) {
+        if (this.balance < withdrawalAmount) {
             System.out.println("Only " + this.balance + " available. Withdrawal not processed");
         } else {
             this.balance -= withdrawalAmount;
